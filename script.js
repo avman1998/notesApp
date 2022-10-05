@@ -1,7 +1,8 @@
 const textareaEle = document.querySelector("textarea");
 const addbtn = document.querySelector("#add-btn");
-
+const clearbtn = document.querySelector("#clear-btn");
 let notesEle = document.querySelector("#notes");
+
 let notesArray = [];
 if (localStorage.getItem("myNotes")) {
   let items = localStorage.getItem("myNotes").split(",");
@@ -14,6 +15,7 @@ if (localStorage.getItem("myNotes")) {
 //Rendering Notes
 addbtn.addEventListener("click", function () {
   if (textareaEle.value != "") {
+    let checker = false;
     notesArray.unshift(textareaEle.value);
     localStorage.setItem("myNotes", notesArray);
     render(notesArray);
@@ -41,6 +43,7 @@ function render(notes) {
   <p class="orderNo">${i + 1}.</p>
   <p>${notes[i]}</p>
   <div class="note-btns">
+  
   <button onClick="editNote(this,${i})">✏️</button>
   <button onClick="deleteNote(this,${i})">❌</button>
   </div>
@@ -48,3 +51,8 @@ function render(notes) {
   }
   notesEle.innerHTML = listItems;
 }
+clearbtn.addEventListener("click", function () {
+  notesArray = [];
+  localStorage.setItem("myNotes", notesArray);
+  render(notesArray);
+});

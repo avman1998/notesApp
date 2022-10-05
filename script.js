@@ -40,8 +40,10 @@ function render(notes) {
   let listItems = "";
   for (let i = 0; i < notes.length; i++) {
     listItems += `<div class="note">
+    <div class="orderandNote">
   <p class="orderNo">${i + 1}.</p>
   <p>${notes[i]}</p>
+  </div>
   <div class="note-btns">
   
   <button onClick="editNote(this,${i})">✏️</button>

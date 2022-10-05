@@ -6,7 +6,7 @@ let notesArray = [];
 if (localStorage.getItem("myNotes")) {
   let items = localStorage.getItem("myNotes").split(",");
   if (items) {
-    items.length = 0;
+    // items.length = 0;
     notesArray = items;
     render(notesArray);
   }
@@ -38,7 +38,7 @@ function render(notes) {
   let listItems = "";
   for (let i = 0; i < notes.length; i++) {
     listItems += `<div class="note">
-    
+  <p class="orderNo">${i + 1}.</p>
   <p>${notes[i]}</p>
   <div class="note-btns">
   <button onClick="editNote(this,${i})">✏️</button>

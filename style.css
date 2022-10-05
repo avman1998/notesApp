@@ -49,3 +49,7 @@ body {
 .add-btn {
   background: #82e0aa;
 }
+.orderNo {
+  /* font-weight: n; */
+  color: black;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              notesHeadBg: "#F0F3F4  ",
+              notesText: "#2E4053 ",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    style="font-family: 'Montserrat', sans-serif"
+    class="flex flex-col items-center justify-start min-h-[100vh] bg-black py-[10px]"
+  >
+    <div
+      class="main-container text-center flex flex-col gap-[30px] max-w-[100%] px-[30px] my-[20px] mx-[20px]"
+    >
+      <h1
+        class="text-[240%] font-bold text-notesText bg-notesHeadBg rounded-lg py-[30px]"
+      >
+        Notes App 📚 🖋️
+      </h1>
+      <textarea
+        name=""
+        id=""
+        cols="60"
+        rows="5"
+        id="myClipboard"
+        class="text-[130%] border-2 border-black font-semibold text-[120%] p-[20px] rounded-lg"
+      ></textarea>
+      <button
+        id="add-btn"
+        class="add-btn py-[10px] px-[15px] text-[150%] text-notesText rounded-lg"
+      >
+        Add note
+      </button>
+      <div id="notes" class="text-[130%] text-notesText"></div>
+
+      <h1
+        class="text-[160%] font-bold mt-[30px] text-notesText bg-notesHeadBg py-[20px] px-[20px] rounded mb-[20px]"
+      >
+        Developed By Aman Verma
+      </h1>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

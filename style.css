@@ -20,7 +20,7 @@ body {
   padding: 5px 20px;
   background-color: white;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 105%;
   margin: 15px 0px;
   border-radius: 10px;
@@ -35,7 +35,7 @@ body {
   padding: 5px 20px;
   background-color: lightblue;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 105%;
   margin: 15px 0px;
   border-radius: 10px;

@@ -3,12 +3,13 @@ const addbtn = document.querySelector("#add-btn");
 
 let notesEle = document.querySelector("#notes");
 let notesArray = [];
-
-let items = localStorage.getItem("myNotes").split(",");
-if (items) {
-  items.length = 0;
-  notesArray = items;
-  render(notesArray);
+if (localStorage.getItem("myNotes")) {
+  let items = localStorage.getItem("myNotes").split(",");
+  if (items) {
+    items.length = 0;
+    notesArray = items;
+    render(notesArray);
+  }
 }
 //Rendering Notes
 addbtn.addEventListener("click", function () {

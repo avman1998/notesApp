@@ -16,28 +16,30 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   padding: 5px 20px;
   background-color: white;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 105%;
   margin: 15px 0px;
   border-radius: 10px;
+  max-width: 100%;
 }
 .note:nth-child(odd) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   padding: 5px 20px;
   background-color: lightblue;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 105%;
   margin: 15px 0px;
   border-radius: 10px;
+  max-width: 100%;
 }
 .note p {
   display: flex;

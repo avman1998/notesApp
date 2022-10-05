@@ -42,7 +42,9 @@ function render(notes) {
     listItems += `<div class="note">
     <div class="orderandNote">
   <p class="orderNo">${i + 1}.</p>
+ 
   <p>${notes[i]}</p>
+
   </div>
   <div class="note-btns">
   
